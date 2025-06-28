@@ -1,0 +1,62 @@
+{
+  "summary": [
+    {
+      "title": "Causas complexas",
+      "description": "Tensões não resolvidas após a Primeira Guerra, crescimento de ideologias totalitárias e agressões imperialistas, além da falha da Liga das Nações.  "
+    },
+    {
+      "title": "Estopim do conflito",
+      "description": "Invasão da Polônia pela Alemanha nazista em 1939 e declaração de guerra do Reino Unido e França.  "
+    },
+    {
+      "title": "Alianças e fases iniciais",
+      "description": "Vitória do Eixo na Europa e Ásia, com destaque para a invasão da União Soviética e ataque a Pearl Harbor.  "
+    },
+    {
+      "title": "Mudanças no curso da guerra",
+      "description": "Vitórias aliadas a partir de 1942, batalhas decisivas como Stalingrado, Normandia (Dia D) e avanço no Pacífico.  "
+    },
+    {
+      "title": "Encerramento do conflito",
+      "description": "Rendição da Alemanha em 1945 na Europa e do Japão após Hiroshima e Nagasaki.  "
+    },
+    {
+      "title": "Consequências políticas",
+      "description": "Criação das Nações Unidas, início da Guerra Fria e mudança do poder global do continente europeu para os EUA e União Soviética.  "
+    },
+    {
+      "title": "Impactos sociais",
+      "description": "Holocausto e genocídio de seis milhões de judeus, além de processos de descolonização no pós-guerra.  "
+    },
+    {
+      "title": "Transformações econômicas",
+      "description": "Techinologia avançada, recuperação econômica dos países envolvidos, crescimento dos EUA como potência econômica.  "
+    },
+    {
+      "title": "Legado duradouro",
+      "description": "Influência nas relações internacionais e na memória coletiva, moldando o mundo contemporâneo."
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Quais foram as principais causas da Segunda Guerra Mundial?",
+      "name": ""
+    },
+    {
+      "role": "assistant",
+      "content": "As principais causas incluem tensões não resolvidas após a Primeira Guerra Mundial, o crescimento de ideologias totalitárias como o nazismo e o fascismo, agressões imperialistas por parte de países como Alemanha, Itália e Japão, e a falha da Liga das Nações em manter a paz.",
+      "name": ""
+    },
+    {
+      "role": "user",
+      "content": "Qual foi o estopim do conflito?",
+      "name": ""
+    },
+    {
+      "role": "assistant",
+      "content": "O estopim do conflito foi a invasão da Polônia pela Alemanha nazista em setembro de 1939, o que levou o Reino Unido e a França a declararem guerra à Alemanha.",
+      "name": ""
+    }
+  ]
+}

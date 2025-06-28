@@ -1,0 +1,25 @@
+@layer tailwind-base, primereact, tailwind-utilities;
+
+@import "primereact/resources/themes/lara-light-teal/theme.css"
+layer(primereact);
+
+@import "primeicons/primeicons.css";
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+@reference "tailwindcss";
+
+body {
+  @apply m-0 p-8;
+}
+
+p {
+  @apply m-0 p-0;
+}
