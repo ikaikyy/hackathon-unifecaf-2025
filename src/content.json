@@ -2,5 +2,25 @@
   {
     "header": "A Segunda Guerra Mundial: Um Conflito Global e suas Consequências",
     "source": "/content/segunda-guerra-mundial.md"
+  },
+  {
+    "header": "A Revolução Industrial: Transformações Sociais e Econômicas",
+    "source": "/content/revolucao-industrial.md"
+  },
+  {
+    "header": "A Guerra Fria: Conflitos Ideológicos e Geopolíticos",
+    "source": "/content/guerra-fria.md"
+  },
+  {
+    "header": "A Independência do Brasil: Lutas e Conquistas",
+    "source": "/content/independencia-do-brasil.md"
+  },
+  {
+    "header": "A Era Medieval: Feudalismo e a Igreja Católica",
+    "source": "/content/era-medieval.md"
+  },
+  {
+    "header": "A Revolução Francesa: Liberdade, Igualdade e Fraternidade",
+    "source": "/content/revolucao-francesa.md"
   }
 ]

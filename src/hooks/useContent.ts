@@ -9,20 +9,20 @@ export type Content = {
 
 function useContent() {
   async function loadContent(source: string): Promise<Content> {
-    source = "/content/" + source + ".md";
-
     const content: Content = contents.find((content: Content) => {
       return source === content.source;
     });
 
     if (!content) console.warn(`Content not found for source: ${source}`);
 
-    const contentResponse = await fetch(content.source);
+    const contentClone = { ...content };
 
-    content.source = await contentResponse.text();
-    content.source = await marked.parse(content.source);
+    const contentResponse = await fetch(contentClone.source);
 
-    return content;
+    contentClone.source = await contentResponse.text();
+    contentClone.source = await marked.parse(contentClone.source);
+
+    return contentClone;
   }
 
   return {
