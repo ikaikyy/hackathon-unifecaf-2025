@@ -5,6 +5,7 @@ import { marked } from "marked";
 export type Content = {
   header: string;
   source: string;
+  formatted?: string;
 };
 
 function useContent() {
@@ -15,14 +16,12 @@ function useContent() {
 
     if (!content) console.warn(`Content not found for source: ${source}`);
 
-    const contentClone = { ...content };
+    const contentResponse = await fetch(content.source);
 
-    const contentResponse = await fetch(contentClone.source);
+    content.formatted = await contentResponse.text();
+    content.formatted = await marked.parse(content.formatted);
 
-    contentClone.source = await contentResponse.text();
-    contentClone.source = await marked.parse(contentClone.source);
-
-    return contentClone;
+    return content;
   }
 
   return {

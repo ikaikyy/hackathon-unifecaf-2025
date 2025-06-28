@@ -16,7 +16,7 @@ function App() {
   const [selectedContent, setSelectedContent] = useState<string | null>(null);
   const [summary, setSummary] = useState<SummaryItem[] | null>(null);
 
-  const { createChatCompletion, summarizeContent, messages } = useAzureOpenAI();
+  const { createChatCompletion, summarizeContent } = useAzureOpenAI();
   const { setSidebarVisible } = useSidebars();
 
   useMemo(async () => {
@@ -27,7 +27,7 @@ function App() {
     const newContent = await loadContent(selectedContent);
 
     setContent(newContent);
-  }, [loadContent]);
+  }, [loadContent, selectedContent]);
 
   return (
     <div className="flex flex-col gap-4 p-4">
@@ -102,7 +102,7 @@ function App() {
                       className="p-button p-component p-button-outlined"
                       onClick={async () => {
                         const newSummary = await summarizeContent(
-                          content.source,
+                          content.formatted,
                         );
 
                         setSummary(newSummary);
@@ -130,7 +130,7 @@ function App() {
             header={content.header}
             pt={{
               content: {
-                dangerouslySetInnerHTML: { __html: content.source },
+                dangerouslySetInnerHTML: { __html: content.formatted },
               },
             }}
           />

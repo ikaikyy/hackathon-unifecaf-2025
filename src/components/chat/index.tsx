@@ -1,3 +1,4 @@
+import { marked } from "marked";
 import { Avatar } from "primereact/avatar";
 import { InputTextarea } from "primereact/inputtextarea";
 
@@ -15,15 +16,20 @@ export default function Chat() {
         {messages.map((message, index) => {
           if (!["user", "assistant"].includes(message.role)) return null;
 
+          message.content = marked.parse(message.content?.toString() || "", {
+            async: false,
+          });
+
           return (
             <div
               key={index}
               className="p-2 bg-gray-100 rounded flex flex-row gap-2"
             >
               {message.role === "user" && (
-                <div className="w-full text-right">
-                  <p>{message.content?.toString()}</p>
-                </div>
+                <div
+                  className="w-full text-right"
+                  dangerouslySetInnerHTML={{ __html: message.content }}
+                />
               )}
               <div className="flex items-start justify-center">
                 <Avatar
@@ -34,9 +40,10 @@ export default function Chat() {
                 />
               </div>
               {message.role === "assistant" && (
-                <div className="w-full">
-                  <p>{message.content?.toString()}</p>
-                </div>
+                <div
+                  className="w-full"
+                  dangerouslySetInnerHTML={{ __html: message.content }}
+                />
               )}
             </div>
           );
